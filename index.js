@@ -46,7 +46,9 @@ function findConfigFile(findListOfPackages) {
 }
 
 function parseToLocaleString(number) {
+
     return parseInt(number).toLocaleString();
+
 }
 
 function listDownloads() {
