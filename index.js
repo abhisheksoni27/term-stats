@@ -31,7 +31,7 @@ var table = new Table({
     colWidths: [15, 15, 15, 15]
 });
 
-function findConfigFile(callback) {
+function findConfigFile(findListOfPackages) {
 
     cp.exec('npm root -g', (err, stdout, stdin) => {
 
@@ -39,7 +39,7 @@ function findConfigFile(callback) {
 
         let configRoot = npmRoot.substr(0, npmRoot.lastIndexOf(path.sep) + 1);
 
-        callback(configRoot);
+        findListOfPackages(configRoot);
 
     });
 
