@@ -1,0 +1,26 @@
+{
+  "name": "term-stats",
+  "version": "0.0.1",
+  "description": "check npm download stats in your terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhisheksoni27/term-stats.git"
+  },
+  "keywords": [
+    "terminal",
+    "npm",
+    "stats",
+    "download",
+    "packages"
+  ],
+  "author": "Abhishek Soni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abhisheksoni27/term-stats/issues"
+  },
+  "homepage": "https://github.com/abhisheksoni27/term-stats#readme"
+}
