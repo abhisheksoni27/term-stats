@@ -87,4 +87,4 @@ function findListOfPackages(configRoot) {
     });
 };
 
-findConfigFile(findListOfPackages);
+// findConfigFile(findListOfPackages);
