@@ -45,6 +45,10 @@ function findConfigFile(findListOfPackages) {
 
 }
 
+function parseToLocaleString(number) {
+    return parseInt(number).toLocaleString();
+}
+
 function listDownloads() {
 
     listOfPackages.forEach((package) => {
@@ -57,11 +61,11 @@ function listDownloads() {
 
                 let doc = cheerio.load(html);
 
-                let dailyDownloads = chalk.magenta(doc('.daily-downloads').text());
+                let dailyDownloads = chalk.magenta(parseToLocaleString(doc('.daily-downloads').text()));
 
-                let weeklyDownloads = chalk.cyan(doc('.weekly-downloads').text());
+                let weeklyDownloads = chalk.cyan(parseToLocaleString(doc('.weekly-downloads').text()));
 
-                let monthlyDownloads = chalk.green(doc('.monthly-downloads').text());
+                let monthlyDownloads = chalk.green(parseToLocaleString(doc('.monthly-downloads').text()));
 
                 table.push([package, dailyDownloads, weeklyDownloads, monthlyDownloads]);
 
@@ -83,4 +87,4 @@ function findListOfPackages(configRoot) {
     });
 };
 
-// findConfigFile(findListOfPackages);
+findConfigFile(findListOfPackages);
