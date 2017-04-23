@@ -17,12 +17,16 @@ const downloadsEmoji = chalk.white(emoji.get('arrow_down'));
 
 var table = new Table({
     head: [
-
         chalk.blue('Package ') + packageEmoji,
-
-        chalk.bgMagenta.white(' Daily '),
-        chalk.bgCyan.white(' Weekly '),
-        chalk.bgGreen.white(' Monthly ')
+        chalk
+            .bgMagenta
+            .white(' Daily '),
+        chalk
+            .bgCyan
+            .white(' Weekly '),
+        chalk
+            .bgGreen
+            .white(' Monthly ')
     ],
     colWidths: [15, 15, 15, 15]
 });
