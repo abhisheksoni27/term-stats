@@ -10,12 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/abhisheksoni27/term-stats.git"
   },
+  "bin": {
+    "term-stats": "./index.js"
+  },
   "keywords": [
     "terminal",
     "npm",
     "stats",
     "download",
-    "packages"
+    "packages",
+    "count"
   ],
   "author": "Abhishek Soni",
   "license": "MIT",

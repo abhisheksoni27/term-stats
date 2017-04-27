@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const chalk = require('chalk');
 const cheerio = require('cheerio');
 const request = require('request');
@@ -13,36 +15,31 @@ const URL = 'https://www.npmjs.com/package/';
 var listOfPackages;
 
 const packageEmoji = chalk.blue(emoji.get('package'));
-const downloadsEmoji = chalk.white(emoji.get('arrow_down'));
 
 var table = new Table({
     head: [
         chalk.blue('Package ') + packageEmoji,
         chalk
-            .bgMagenta
-            .white(' Daily '),
+        .bgMagenta
+        .white(' Daily '),
         chalk
-            .bgCyan
-            .white(' Weekly '),
+        .bgCyan
+        .white(' Weekly '),
         chalk
-            .bgGreen
-            .white(' Monthly ')
+        .bgGreen
+        .white(' Monthly ')
     ],
     colWidths: [15, 15, 15, 15]
 });
 
 function findConfigFile(findListOfPackages) {
-
-    cp.exec('npm root -g', (err, stdout, stdin) => {
-
-        let npmRoot = stdout.trim();
-
-        let configRoot = npmRoot.substr(0, npmRoot.lastIndexOf(path.sep) + 1);
-
-        findListOfPackages(configRoot);
-
-    });
-
+    let config = process.env.TERM_STATS_CONFIG;
+    if (config) {
+        findListOfPackages(config);
+        return;
+    }
+    console.log("Did you add the environment variable?");
+    return;
 }
 
 function parseToLocaleString(number) {
@@ -52,6 +49,7 @@ function parseToLocaleString(number) {
 }
 
 function listDownloads() {
+    var tableLength = 0;
 
     listOfPackages.forEach((package) => {
 
@@ -69,9 +67,12 @@ function listDownloads() {
 
                 let monthlyDownloads = chalk.green(parseToLocaleString(doc('.monthly-downloads').text()));
 
-                table.push([package, dailyDownloads, weeklyDownloads, monthlyDownloads]);
+                tableLength = table.push([package, dailyDownloads, weeklyDownloads, monthlyDownloads]);
 
-                console.log(table.toString());
+                // All packages have been scraped.
+                if (tableLength === listOfPackages.length) {
+                    console.log(table.toString());
+                }
             }
         });
     });
@@ -89,4 +90,4 @@ function findListOfPackages(configRoot) {
     });
 };
 
-// findConfigFile(findListOfPackages);
+findConfigFile(findListOfPackages);
