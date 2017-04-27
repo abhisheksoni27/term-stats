@@ -45,7 +45,7 @@ $ echo $TERM_STATS_CONFIG
 '/usr/lib/' #Directory location of your config file. (See step 2.)
 ```
 
-:tada:
+🎉
 
 **Step 2.** Make a file named `term-stats.json` in the directory you chose above.
 
