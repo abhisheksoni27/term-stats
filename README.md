@@ -4,6 +4,8 @@ Check npm download stats in your terminal. 💯 💻
 [![npm](https://img.shields.io/npm/dt/term-stats.svg?style=flat-square)](https://www.npmjs.com/package/term-stats)
 [![license](https://img.shields.io/npm/l/term-stats.svg?style=flat-square)](https://www.npmjs.com/package/term-stats)
 
+![term-stats demo](https://raw.githubusercontent.com/abhisheksoni27/term-stats/master/term-stats.gif)
+
 ## Installation
 
 Well, here we go again.
@@ -72,8 +74,4 @@ Save it and move on. You are done. The next step is gonna be brilliant.
 $ term-stats
 ```
 
-And the party begins. (Demo. Go see the [demo](#demo). ⬇)
-
-## Demo
-
-![term-stats demo](https://raw.githubusercontent.com/abhisheksoni27/term-stats/master/term-stats.gif)
+And the party begins. 
