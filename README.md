@@ -69,7 +69,7 @@ See the example `term-stats.json` to see how it works. You __*need*__ to have a 
 }
 ```
 
-Save it and move on. You are done. The next step is gonna be brilliant.
+Save it and move on. You are done. The next step is gonna be _brilliant_.
 
 **Party Step** All you have to do now is fire a terminal, and type in
 
