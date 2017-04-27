@@ -1,5 +1,5 @@
 ## term-stats
-Check npm download stats in your terminal :100: :computer:
+Check npm download stats in your terminal 💻 💯
 
 [![npm](https://img.shields.io/npm/dt/term-stats.svg?style=flat-square)](https://www.npmjs.com/package/term-stats)
 [![license](https://img.shields.io/npm/l/term-stats.svg?style=flat-square)](https://www.npmjs.com/package/term-stats)
