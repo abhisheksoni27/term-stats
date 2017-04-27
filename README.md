@@ -76,3 +76,4 @@ And the party begins. (Demo. Go see the [demo](#demo). ⬇)
 
 ## Demo
 
+![term-stats demo](https://raw.githubusercontent.com/abhisheksoni27/term-stats/master/term-stats.gif)
