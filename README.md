@@ -13,6 +13,7 @@ Check npm download stats in your terminal. 💯 💻
 Well, here we go again.
 
 Let the awesomeness breathe. (duh!)
+
 ```bash
 $ yarn global add term-stats
 ```
