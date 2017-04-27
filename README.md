@@ -75,3 +75,5 @@ $ term-stats
 ```
 
 And the party begins. 
+
+🎉 😂
