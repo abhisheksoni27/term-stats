@@ -1,6 +1,9 @@
 ## term-stats
 Check npm download stats in your terminal :100: :computer:
 
+[![npm](https://img.shields.io/npm/dt/term-stats.svg?style=flat-square)](https://www.npmjs.com/package/term-stats)
+[![license](https://img.shields.io/npm/l/term-stats.svg?style=flat-square)](https://www.npmjs.com/package/term-stats)
+
 ## Installation
 
 Well, here we go again.
@@ -22,27 +25,36 @@ $ npm i -g term-stats
 
 A config file is what helps the package display stats for only the ones you care about. In this step you are gonna create one, and put it where it belongs.
 
-<!--**First**, you need to find your `npm` root directory.
-Go to a terminal and run the following command:
+* Add Environment variable &ndash; **TERM_STATS_CONFIG**
+
+Adding an environment variable is a different procedure in every OS. If you are on windows, you can hit the `window` key and type `Environment variables` (Or you could Google). On linux/unix,
+
+* if you're using `zsh`, that's probably in your home directory's `~/.zshrc` file
+* if you're using `bash`, that could be your `bash_profile` file or `~/.bashrc` file
+* if you're using `fish`, use set -gx key value in your `~/.config/fish/config.fish` file
+
+Open the required file, and enter the following line:
+
+```bash_profile
+export TERM_STATS_CONFIG = '/usr/lib'
+```
+Change the contents inside the quotes to wherever you want to save the file. To check if it was successful, fire a new terminal and run this,
 
 ```bash
-$ npm root -g
-/usr/lib/node_modules #Linux
-C:\Users\YOUR_USERNAME\AppData\Local\node_modules #Windows
+$ echo $TERM_STATS_CONFIG
+'/usr/lib/' #Directory location of your config file. (See step 2.)
 ```
 
-You might get a different result but as long as it is a `node_modules` folder, you are good to go. Otherwise, please feel free to file an issue.
+:tada:
 
-**Second**, `cd` into that directory, and make a new file named `term-stats.json`. That's where you will put the list of packages you wanna know the stats for.-->
+**Step 2.** Make a file named `term-stats.json` in the directory you chose above.
 
 ```bash
-$ cd /usr/lib/node_modules
+$ cd /usr/lib/
 $ touch term-stats.json && nano term-stats.json
 ```
 
-
 Feel free to open it in whatever editor you hang out with.
-
 
 See the example `term-stats.json` to see how it works. You __*need*__ to have a key named `packages`,   which is an array of the names of packages you want the stats for.
 
@@ -54,7 +66,7 @@ See the example `term-stats.json` to see how it works. You __*need*__ to have a 
 
 Save it and move on. You are done. The next step is gonna be brilliant.
 
-**Step 2.** All you have to do now is fire a terminal, and type in
+**Party Step** All you have to do now is fire a terminal, and type in
 
 ```bash
 $ term-stats
