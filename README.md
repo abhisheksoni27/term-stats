@@ -6,6 +6,8 @@ Check npm download stats in your terminal. 💯 💻
 
 ![term-stats demo](https://raw.githubusercontent.com/abhisheksoni27/term-stats/master/term-stats.gif)
 
+💎 😍
+
 ## Installation
 
 Well, here we go again.

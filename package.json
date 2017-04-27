@@ -1,6 +1,6 @@
 {
   "name": "term-stats",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "check npm download stats in your terminal :computer: :100:",
   "main": "index.js",
   "scripts": {
