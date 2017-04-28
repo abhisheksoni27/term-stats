@@ -56,7 +56,6 @@ function listDownloads() {
         let newURL = URL + package;
 
         request(newURL, function (error, response, html) {
-
             if (!error && response.statusCode == 200) {
 
                 let doc = cheerio.load(html);
@@ -70,6 +69,13 @@ function listDownloads() {
                 tableLength = table.push([package, dailyDownloads, weeklyDownloads, monthlyDownloads]);
 
                 // All packages have been scraped.
+                if (tableLength === listOfPackages.length) {
+                    console.log(table.toString());
+                }
+            } else if (response.statusCode == 404) {
+                // Wrong or typo in package name. Inserting "N/A" in the table.
+                tableLength = table.push([package, "N/A", "N/A", "N/A"]);
+
                 if (tableLength === listOfPackages.length) {
                     console.log(table.toString());
                 }
