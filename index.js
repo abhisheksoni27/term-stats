@@ -49,6 +49,7 @@ function parseToLocaleString(number) {
 }
 
 function listDownloads() {
+
     var tableLength = 0;
 
     listOfPackages.forEach((package) => {
